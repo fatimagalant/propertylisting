@@ -14,14 +14,34 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- Landing -->
-    <section class="landing">
+    <section id="landing">
       <div class="bg-header">
         <h1 class="heading"><strong>Property Listing</strong></h1>
       </div>
     </section>
+    <div class="card shadow-lg" id="card">
+      <div class="row">
+        <div class="col-md-3">
+          <select>
+            <option></option>
+          </select>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
     <!-- Properties -->
     <section id="about">
       <h1 id="heading1">Discover our listing properties</h1>
@@ -29,77 +49,171 @@
         If you're looking for the perfect place to stay, take a look at these
         cosy, modern households
       </h4>
-      <!-- first row of cards -->
-      <div class="row">
-        <div class="column">
-          <div class="card mb-3">
-            <img
-              src="./assets/images/house1.jpg"
-              alt="new renovated living room"
-            />
-            <h1 id="head-1">Renovated living room</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+
+      <!-- display -->
+      <h1 class="featured">Featured Properties :</h1>
+
+      <div class="container">
+        <div class="wrapper card-i">
+          <div class="border">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+              porro.
+            </p>
+            <div class="icons">
+              <i class="fa-solid fa-bed"></i>
+              <i class="fa-solid fa-shower"></i>
+              <i class="fa-solid fa-warehouse"></i>
+              <i class="fa-solid fa-ruler"></i>
+            </div>
           </div>
         </div>
-        <div class="column">
-          <div class="card">
-            <img src="./assets/images/house2.jpg" alt="modern 2 story home" />
-            <h1 id="head-1">Modern 2 story house</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+        <div
+          class="wrapper card-ii"
+          style="
+            background: url(./assets/images/house2.jpg) left center no-repeat
+              background-size 500px;
+          "
+        >
+          <div class="border">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+              porro.
+            </p>
+            <div class="icons">
+              <i class="fa-solid fa-bed"></i>
+              <i class="fa-solid fa-shower"></i>
+              <i class="fa-solid fa-warehouse"></i>
+              <i class="fa-solid fa-ruler"></i>
+            </div>
           </div>
         </div>
-        <div class="column">
-          <div class="card">
-            <img src="./assets/images/house3.jpg" alt="upgraded kitchen" />
-            <h1 id="head-1">Newly upgraded kitchen</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <img src="./assets/images/house4.jpg" alt="modern living area" />
-            <h1 id="head-1">Modern living area</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+        <div
+          class="wrapper card-iii"
+          style="
+            background: url(./assets/images/house3.jpg) left center no-repeat
+              background-size 500px;
+          "
+        >
+          >
+          <div class="border">
+            <h2>Lorem ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+              porro.
+            </p>
+            <div class="icons">
+              <i class="fa-solid fa-bed"></i>
+              <i class="fa-solid fa-shower"></i>
+              <i class="fa-solid fa-warehouse"></i>
+              <i class="fa-solid fa-ruler"></i>
+            </div>
           </div>
         </div>
       </div>
-      <!-- second row of cards -->
-      <div class="row">
-        <div class="column">
-          <div class="card">
-            <img
-              src="./assets/images/house5.jpg"
-              alt="bedroom with working area"
-            />
-            <h1 id="head-1">Bedroom with a work space</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+      <!-- first row of cards -->
+      <div id="properties">
+        <div class="row">
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img
+                src="./assets/images/house1.jpg"
+                alt="new renovated living room"
+              />
+              <h1 id="head-1">Renovated living room</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img src="./assets/images/house2.jpg" alt="modern 2 story home" />
+              <h1 id="head-1">Modern 2 story house</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img src="./assets/images/house3.jpg" alt="upgraded kitchen" />
+              <h1 id="head-1">Newly upgraded kitchen</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img src="./assets/images/house4.jpg" alt="modern living area" />
+              <h1 id="head-1">Modern living area</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
           </div>
         </div>
-        <div class="column">
-          <div class="card">
-            <img
-              src="./assets/images/house6.jpg"
-              alt="Bedroom with king size bed"
-            />
-            <h1 id="head-1">Bedroom with king size bed</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+        <!-- second row of cards -->
+        <div class="row">
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img
+                src="./assets/images/house5.jpg"
+                alt="bedroom with working area"
+              />
+              <h1 id="head-1">Bedroom with a work space</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
           </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <img
-              src="./assets/images/house7.jpg"
-              alt="bedroom with double bed"
-            />
-            <h1 id="head-1">Bedroom with double bed</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img
+                src="./assets/images/house6.jpg"
+                alt="Bedroom with king size bed"
+              />
+              <h1 id="head-1">Bedroom with king size bed</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
           </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <img src="./assets/images/house8.jpg" alt="wooden styled bed" />
-            <h1 id="head-1">Bedroom with wooden bed</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img
+                src="./assets/images/house7.jpg"
+                alt="bedroom with double bed"
+              />
+              <h1 id="head-1">Bedroom with double bed</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img src="./assets/images/house8.jpg" alt="wooden styled bed" />
+              <h1 id="head-1">Bedroom with wooden bed</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img src="./assets/images/house9.jpg" alt="wooden styled bed" />
+              <h1 id="head-1">Bedroom with wooden bed</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img src="./assets/images/house10.jpg" alt="wooden styled bed" />
+              <h1 id="head-1">Bedroom with wooden bed</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img src="./assets/images/house11.jpg" alt="wooden styled bed" />
+              <h1 id="head-1">Bedroom with wooden bed</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card mb-3" style="width: 18rem">
+              <img src="./assets/images/housse12.jpg" alt="wooden styled bed" />
+              <h1 id="head-1">Bedroom with wooden bed</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </div>
           </div>
         </div>
       </div>
