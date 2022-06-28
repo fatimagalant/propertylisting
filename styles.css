@@ -95,13 +95,18 @@ body {
   justify-content: center;
 }
 #card {
-  height: 10rem;
+  height: 7rem;
   width: 80%;
   margin-left: 10%;
   margin-top: -4;
   margin-top: -61px;
 }
 #card-2 {
+  width: 22rem;
+  height: auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 #img {
   width: 20rem;
@@ -235,4 +240,11 @@ p::after {
     display: flex;
     flex-direction: column;
   }
+}
+
+select{
+  width: 18rem;
+}
+a{
+  width:5rem;
 }
