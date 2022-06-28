@@ -166,18 +166,13 @@ const Houses = [
 
 console.log(Houses);
 
-function showHouses(Houses) {
-  houseContainer.innerHTML = "";
-  houses.forEach((house) => {
-    houseContainer.innerHTML += `
-    <div class="properties">
-    <img src=${house.imgURL} />
-    <h2>${house.title}</h2>
-    <h2><small>${house.description}</small></h2>
-    <h2><small>${house.address}</small></h2>
-    <p>R${house.price}</p>
-    <p>area  ${house.area}</p>
-    </div>
-        `;
+function showItems(Houses) {
+  document.querySelector("#houses").innerHTML = "";
+  Houses.forEach((House, i) => {
+    document.querySelector("#houses").innerHTML += `
+    <div class="card mb-3" id="card-2">
+    <img id="img" src=${House.imgURL} /></div>
+    `;
   });
 }
+showItems(Houses);

@@ -101,6 +101,12 @@ body {
   margin-top: -4;
   margin-top: -61px;
 }
+#card-2 {
+}
+#img {
+  width: 20rem;
+  height: auto;
+}
 .card {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
