@@ -22,70 +22,91 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- Navigation -->
+    <div class="topnav">
+      <div class="topnav-right">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">Collections</a>
+        <a href="#contact">Discover</a>
+        <span class="social">
+          <a href="#twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#insta"><i class="fab fa-instagram"></i></a>
+        </span>
+      </div>
+    </div>
     <!-- Landing -->
     <section id="landing">
       <div class="bg-header">
-        <span class="entry"></span>
+        <h1 class="heading">Golden Crown Properties</h1>
       </div>
     </section>
     <div class="card shadow-lg" id="card">
       <div class="row">
         <div class="col-md-3">
+          <!-- <select class="form-select" aria-label="Default select example"> -->
+          <select onchange="categoryFilter(event)">
+            <option value="all" selected>Property Type</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Condo">Condo</option>
+            <option value="Loft">Loft</option>
+            <option value="Single-Family Home">Single-Family Home</option>
+            <option value="Multi-Family Home">Multi-Family Home</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select onchange="locationFilter(event)">
+            <option value="all" selected>All Locations</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value=" Turkey">Turkey</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Austria">Austria</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Greece">Greece</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Knysna">Knysna</option>
+            <option value=" Italy">Italy</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select onchange="priceSort(event)">
+            <option value="asc">Price Ascending</option>
+            <option value="desc">Price Decending</option>
+          </select>
+        </div>
+        <div class="col-md-3">
           <select class="form-select" aria-label="Default select example">
-            <option selected onchange="
-              Sort(event)">Property Type</option>
+            <option selected onchange="nameSort(event)">Max. Price</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
         </div>
-        <div class="col-md-3">
-        <select class="form-select" aria-label="Default select example">
-          <option selected onchange="nameSort(event)">All Cities</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
       </div>
-      <div class="col-md-3">
-        <select class="form-select" aria-label="Default select example">
-          <option selected onchange="nameSort(event)">Bedrooms</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-      <div class="col-md-3">
-        <select class="form-select" aria-label="Default select example">
-          <option selected onchange="nameSort(event)">Max. Price</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-      </div>
-      <a class="btn btn-secondary" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a class="btn btn-secondary" href="#"
+        ><i class="fa-solid fa-magnifying-glass"></i
+      ></a>
     </div>
     <!-- Properties -->
     <section id="about">
-      <h1 id="heading1">Discover our listing properties</h1>
+      <h1 id="heading1">Check Our Selection Of Finest Properties</h1>
       <h4 id="head-4">
         If you're looking for the perfect place to stay, take a look at these
         cosy, modern households
       </h4>
-
-      <!-- display -->
-      <h1 class="featured">Featured Properties :</h1>
-
-      <div id="houses"></div>
-
-
-
+      <div class="row">
+        <div id="houses"></div>
+      </div>
     </section>
     <!-- Footer -->
-    <section id="footer"></section>
+    <div class="footer"></div>
     <!-- JS LINK -->
     <script src="./scripts.js"></script>
     <!-- Bootstrap JS LINK -->
@@ -94,5 +115,10 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
