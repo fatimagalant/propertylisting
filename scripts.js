@@ -12,7 +12,7 @@ const Houses = [
     bedrooms: "2",
     bathrooms: "1.5",
     garages: "1",
-    area: "1209 sq ft",
+    area: "3209 sq ft",
     price: "R5.0 m",
   },
   {
@@ -28,7 +28,7 @@ const Houses = [
     bedrooms: "5",
     bathrooms: "3",
     garages: "2 ",
-    area: "800 sq ft",
+    area: "1800 sq ft",
     price: "R15.7m",
   },
   {
@@ -44,7 +44,7 @@ const Houses = [
     bedrooms: "5",
     bathrooms: "5.5",
     garages: "4",
-    area: "1200 sq ft",
+    area: "5200 sq ft",
     price: "35.4m",
   },
   {
@@ -59,7 +59,7 @@ const Houses = [
     bedrooms: "1",
     bathrooms: "1",
     garages: "1",
-    area: "800 sq ft",
+    area: "1800 sq ft",
     price: "1.2m",
   },
   {
@@ -73,7 +73,7 @@ const Houses = [
     bedrooms: "2",
     bathrooms: "2.5",
     garages: "1",
-    area: "2000 sq ft",
+    area: "2600 sq ft",
     price: "2.3m",
   },
   {
@@ -88,7 +88,7 @@ const Houses = [
     bedrooms: "1",
     bathrooms: "1",
     garages: "1",
-    area: "800 sq ft",
+    area: "1800 sq ft",
     price: "1.1m",
   },
   {
@@ -104,7 +104,7 @@ const Houses = [
     bedrooms: "3",
     bathrooms: "4",
     garages: "2",
-    area: "1200 sq ft",
+    area: "3200 sq ft",
     price: "7.6m",
   },
   {
@@ -120,7 +120,7 @@ const Houses = [
     bedrooms: "1",
     bathrooms: "1",
     garages: "1",
-    area: "700 sq ft",
+    area: "1700 sq ft",
     price: "3.4m",
   },
   {
@@ -135,7 +135,7 @@ const Houses = [
     bedrooms: "1",
     bathrooms: "2",
     garages: "1",
-    area: "900 sq ft",
+    area: "1200 sq ft",
     price: "17.6m",
   },
   {
@@ -151,7 +151,7 @@ const Houses = [
     bedrooms: "3",
     bathrooms: "2",
     garages: "2",
-    area: "1300 sq ft",
+    area: "4300 sq ft",
     price: "10.6m",
   },
   {
@@ -167,7 +167,7 @@ const Houses = [
     bedrooms: "4",
     bathrooms: "5",
     garages: "1",
-    area: "3000 sq ft",
+    area: "7000 sq ft",
     price: "23.6m",
   },
   {
@@ -183,7 +183,7 @@ const Houses = [
     bedrooms: "2",
     bathrooms: "3",
     garages: "3",
-    area: "1200 sq ft",
+    area: "4200 sq ft",
     price: "14.6m",
   },
 ];
@@ -198,7 +198,7 @@ function showItems(Houses) {
       <div class="card"  id="card-2"> 
          <img id="img" src=${House.imgURL} />
          <h5 class="title"> ${House.title}</h5>
-         <h6>${House.description}</h6>
+         <p>${House.description}</p>
          <div class="container">
   <div class="row align-items-start">
     <div class="col">

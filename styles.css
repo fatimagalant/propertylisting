@@ -225,3 +225,25 @@ body {
 a {
   width: 7rem;
 }
+#footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  height: 16rem;
+  background-color: #caaaaa;
+  display: flex;
+  justify-content: space-around;
+}
+#footer2 {
+  padding: 15px;
+  height: 6rem;
+  background-color: #b39191ad;
+  /* display: flex;
+  justify-content: space-between; */
+}
+@media screen and (max-width: 1092px) {
+  #footer {
+    height: 9rem;
+    background-color: #ad9999;
+  }
+}
