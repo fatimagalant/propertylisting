@@ -203,6 +203,7 @@ function showItems(Houses) {
          <img id="img" src=${House.imgURL} />
          <h5 class="title"> ${House.title}</h5>
          <p>${House.description}</p>
+         <p><i class="fa-solid fa-location-dot"></i>${House.address}</p>
          <div class="container">
   <div class="row align-items-start">
     <div class="col">
@@ -259,3 +260,11 @@ const filterPrice = (e) => {
   }
 };
 localStorage.setItem("Houses", JSON.stringify(Houses));
+
+const filterLocation = (e) => {
+  const location = e.target.value;
+  const filteredLocation = forSale.filter((House) => {
+    return House.location.toLowerCase().includes(location.toLowerCase());
+  });
+  return showForSale(filteredLocation);
+};

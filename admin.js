@@ -200,18 +200,18 @@ function showItems(Houses) {
   Houses.forEach((House) => {
     document.querySelector("#adminhouses").innerHTML += `
     <tr>
-      <td><input ${House.id} value=${House.id} disabled/></td>
-      <td><input ${House.category} value=${House.category} disabled/></td>
-      <td><input ${House.title} value=${House.title} disabled/></td>
-      <td><input ${House.description} value=${House.description}disabled/></td>
-      <td><input ${House.imgURL} value=${House.imgURL} disabled/></td>
-      <td><input ${House.address} value=${House.address} disabled/></td>
-      <td><input ${House.rooms} value=${House.rooms} disabled/></td>
-      <td><input ${House.bedrooms} value=${House.bedrooms} disabled/></td>
-      <td><input ${House.bathrooms} value=${House.bathrooms} disabled/></td>
-      <td><input ${House.garages} value=${House.garages} disabled/></td>
-      <td><input ${House.area} value=${House.area} disabled/></td>
-      <td><input ${House.price} value=${House.price} disabled/></td>
+      <td> ${House.id} </td>
+      <td> ${House.category} </td>
+      <td>t ${House.title} </td>
+      <td> ${House.description} </td>
+      <td> ${House.imgURL}</td>
+      <td> ${House.address} </td>
+      <td> ${House.rooms} </td>
+      <td> ${House.bedrooms} </td>
+      <td> ${House.bathrooms} </td>
+      <td> ${House.garages} </td>
+      <td> ${House.area} </td>
+      <td> ${House.price}</td>
       <td><i class="fa-solid fa-trash-can" onclick="delItem(${House.id})"></i>
           <i class="fa-solid fa-pen-to-square" id="edit${House.id}" onclick="editItem(${House.id})"></i>
           <i class="fa-solid fa-floppy-disk" id="save${House.id}" onclick="updateItem(${House.id})"></i></td>
@@ -252,59 +252,67 @@ function addItem() {
 }
 
 //  Edit Function
-function editItem(id) {
-  document.querySelector(`#title${id}`).disabled = false;
-  document.querySelector(`#address${id}`).disabled = false;
-  document.querySelector(`#bedrooms${id}`).disabled = false;
-  document.querySelector(`#bathrooms${id}`).disabled = false;
-  document.querySelector(`#garages${id}`).disabled = false;
-  document.querySelector(`#area${id}`).disabled = false;
-  document.querySelector(`#category${id}`).disabled = false;
-  document.querySelector(`#imgURL${id}`).disabled = false;
-  document.querySelector(`#price${id}`).disabled = false;
-  document.querySelector(`#rooms${id}`).disabled = false;
-  document.querySelector(`#description${id}`).disabled = false;
-}
+// function editItem(id) {
+//   document.querySelector(`#title${id}`).disabled = false;
+//   document.querySelector(`#address${id}`).disabled = false;
+//   document.querySelector(`#bedrooms${id}`).disabled = false;
+//   document.querySelector(`#bathrooms${id}`).disabled = false;
+//   document.querySelector(`#garages${id}`).disabled = false;
+//   document.querySelector(`#area${id}`).disabled = false;
+//   document.querySelector(`#category${id}`).disabled = false;
+//   document.querySelector(`#imgURL${id}`).disabled = false;
+//   document.querySelector(`#price${id}`).disabled = false;
+//   document.querySelector(`#rooms${id}`).disabled = false;
+//   document.querySelector(`#description${id}`).disabled = false;
+// }
 
-function updateItem(id) {
-  const Houses = Houses.find((Houses) => {
-    return Houses.id == id;
+// function updateItem(id) {
+//   const Houses = Houses.find((Houses) => {
+//     return Houses.id == id;
+//   });
+//   const titleBox = document.querySelector(`#title${id}`);
+//   const descriptionBox = document.querySelector(`#description${id}`);
+//   const addressBox = document.querySelector(`#address${id}`);
+//   const bedroomsBox = document.querySelector(`#bedrooms${id}`);
+//   const bathroomsBox = document.querySelector(`#bathrooms${id}`);
+//   const garageBox = document.querySelector(`#garage${id}`);
+//   const areaBox = document.querySelector(`#area${id}`);
+//   const typeBox = document.querySelector(`#category${id}`);
+//   const imgBox = document.querySelector(`#imgURL${id}`);
+//   const priceBox = document.querySelector(`#price${id}`);
+//   const roomsBox = document.querySelector(`#rooms${id}`);
+
+//   document.querySelector(`#title${id}`).disabled = true;
+//   document.querySelector(`#description${id}`).disabled = true;
+//   document.querySelector(`#address${id}`).disabled = true;
+//   document.querySelector(`#bedrooms${id}`).disabled = true;
+//   document.querySelector(`#bathrooms${id}`).disabled = true;
+//   document.querySelector(`#garages${id}`).disabled = true;
+//   document.querySelector(`#area${id}`).disabled = true;
+//   document.querySelector(`#category${id}`).disabled = true;
+//   document.querySelector(`#imgURL${id}`).disabled = true;
+//   document.querySelector(`#price${id}`).disabled = true;
+//   document.querySelector(`#rooms${id}`).disabled = true;
+
+//   Houses.title = titleBox.value;
+//   Houses.description = descriptionBox.value;
+//   Houses.address = addressBox.value;
+//   Houses.bedrooms = bedroomsBox.value;
+//   Houses.bathrooms = bathroomsBox.value;
+//   Houses.garage = garagesBox.value;
+//   Houses.area = areaBox.value;
+//   Houses.category = category.value;
+//   Houses.imgURL = imgURLBox.value;
+//   Houses.price = priceBox.value;
+//   Houses.rooms = rooms.value;
+//   localStorage.setItem("Houses", JSON.stringify(Houses));
+// }
+// showItems(Houses);
+
+const filterLocation = (e) => {
+  const location = e.target.value;
+  const filteredLocation = forSale.filter((planet) => {
+    return planet.location.toLowerCase().includes(location.toLowerCase());
   });
-  const titleBox = document.querySelector(`#title${id}`);
-  const descriptionBox = document.querySelector(`#description${id}`);
-  const addressBox = document.querySelector(`#address${id}`);
-  const bedroomsBox = document.querySelector(`#bedrooms${id}`);
-  const bathroomsBox = document.querySelector(`#bathrooms${id}`);
-  const garageBox = document.querySelector(`#garage${id}`);
-  const areaBox = document.querySelector(`#area${id}`);
-  const typeBox = document.querySelector(`#category${id}`);
-  const imgBox = document.querySelector(`#imgURL${id}`);
-  const priceBox = document.querySelector(`#price${id}`);
-  const roomsBox = document.querySelector(`#rooms${id}`);
-
-  document.querySelector(`#title${id}`).disabled = true;
-  document.querySelector(`#description${id}`).disabled = true;
-  document.querySelector(`#address${id}`).disabled = true;
-  document.querySelector(`#bedrooms${id}`).disabled = true;
-  document.querySelector(`#bathrooms${id}`).disabled = true;
-  document.querySelector(`#garages${id}`).disabled = true;
-  document.querySelector(`#area${id}`).disabled = true;
-  document.querySelector(`#category${id}`).disabled = true;
-  document.querySelector(`#imgURL${id}`).disabled = true;
-  document.querySelector(`#price${id}`).disabled = true;
-  document.querySelector(`#rooms${id}`).disabled = true;
-
-  Houses.title = titleBox.value;
-  Houses.description = descriptionBox.value;
-  Houses.address = addressBox.value;
-  Houses.bedrooms = bedroomsBox.value;
-  Houses.bathrooms = bathroomsBox.value;
-  Houses.garage = garagesBox.value;
-  Houses.area = areaBox.value;
-  Houses.category = category.value;
-  Houses.imgURL = imgURLBox.value;
-  Houses.price = priceBox.value;
-  Houses.rooms = rooms.value;
-  localStorage.setItem("Houses", JSON.stringify(Houses));
-}
-showItems(Houses);
+  return showForSale(filteredLocation);
+};
