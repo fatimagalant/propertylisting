@@ -15,7 +15,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "1.5",
         garages: "1",
         area: "1209 sq ft",
-        price: "R5.0 m",
+        price: "5 000 000",
       },
       {
         id: "2",
@@ -31,7 +31,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "3",
         garages: "2 ",
         area: "800 sq ft",
-        price: "R15.7m",
+        price: "15 700 000",
       },
       {
         id: "3",
@@ -48,7 +48,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "5.5",
         garages: "4",
         area: "1200 sq ft",
-        price: "35.4m",
+        price: "35 400 000",
       },
       {
         id: "4",
@@ -63,7 +63,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "1",
         garages: "1",
         area: "800 sq ft",
-        price: "1.2m",
+        price: "1 200 000",
       },
       {
         id: "5",
@@ -77,7 +77,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "2.5",
         garages: "1",
         area: "2000 sq ft",
-        price: "2.3m",
+        price: "2 300 000",
       },
       {
         id: "6",
@@ -92,7 +92,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "1",
         garages: "1",
         area: "800 sq ft",
-        price: "1.1m",
+        price: "1 100 000",
       },
       {
         id: "7",
@@ -109,7 +109,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "4",
         garages: "2",
         area: "1200 sq ft",
-        price: "7.6m",
+        price: "7 600 000",
       },
       {
         id: "8",
@@ -125,7 +125,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "1",
         garages: "1",
         area: "700 sq ft",
-        price: "3.4m",
+        price: "3 400 000",
       },
       {
         id: "9",
@@ -140,7 +140,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "2",
         garages: "1",
         area: "900 sq ft",
-        price: "17.6m",
+        price: "17 600 000",
       },
       {
         id: "10",
@@ -156,7 +156,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "2",
         garages: "2",
         area: "1300 sq ft",
-        price: "10.6m",
+        price: "10 600 000",
       },
       {
         id: "11",
@@ -172,7 +172,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "5",
         garages: "1",
         area: "3000 sq ft",
-        price: "23.6m",
+        price: "23 600 000",
       },
       {
         id: "12",
@@ -188,7 +188,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "3",
         garages: "3",
         area: "1200 sq ft",
-        price: "14.6m",
+        price: "14 600 000",
       },
     ];
 console.log(Houses);

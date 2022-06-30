@@ -254,7 +254,7 @@ a {
   }
 }
 @media screen and(max-width:2000px) {
-  .rows {
+  .row {
     display: flex;
     flex-direction: column;
   }

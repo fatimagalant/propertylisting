@@ -7,7 +7,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         title: " Large Detached House",
         description:
           "2 bedroom detached house with 1.5 bathrooms and a garage on a beautiful property",
-        address: "rrowtown, New Zealand",
+        address: "Arrowtown, New Zealand",
         imgURL:
           "https://i.postimg.cc/SKLvNYTt/zac-gudakov-FH3zl-Ds-Y4-Z4-unsplash.jpg",
         rooms: "4",
@@ -15,7 +15,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "1.5",
         garages: "1",
         area: "3209 sq ft",
-        price: "R5.0 m",
+        price: "5 000 000",
       },
       {
         id: "2",
@@ -31,7 +31,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "3",
         garages: "2 ",
         area: "1800 sq ft",
-        price: "R15.7m",
+        price: "15 700 000",
       },
       {
         id: "3",
@@ -48,7 +48,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "5.5",
         garages: "4",
         area: "5200 sq ft",
-        price: "35.4m",
+        price: "35 400 000",
       },
       {
         id: "4",
@@ -63,7 +63,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "1",
         garages: "1",
         area: "1800 sq ft",
-        price: "1.2m",
+        price: "1 200 000",
       },
       {
         id: "5",
@@ -77,7 +77,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "2.5",
         garages: "1",
         area: "2600 sq ft",
-        price: "2.3m",
+        price: "2 300 000",
       },
       {
         id: "6",
@@ -92,7 +92,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "1",
         garages: "1",
         area: "1800 sq ft",
-        price: "1.1m",
+        price: "1 100 000",
       },
       {
         id: "7",
@@ -109,7 +109,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "4",
         garages: "2",
         area: "3200 sq ft",
-        price: "7.6m",
+        price: "7 600 000",
       },
       {
         id: "8",
@@ -125,7 +125,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "1",
         garages: "1",
         area: "1700 sq ft",
-        price: "3.4m",
+        price: "3 400 000",
       },
       {
         id: "9",
@@ -140,7 +140,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "2",
         garages: "1",
         area: "1200 sq ft",
-        price: "17.6m",
+        price: "17 600 000",
       },
       {
         id: "10",
@@ -156,7 +156,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "2",
         garages: "2",
         area: "4300 sq ft",
-        price: "10.6m",
+        price: "10 600 000",
       },
       {
         id: "11",
@@ -172,7 +172,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "5",
         garages: "1",
         area: "7000 sq ft",
-        price: "23.6m",
+        price: "23 600 000",
       },
       {
         id: "12",
@@ -188,7 +188,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "3",
         garages: "3",
         area: "4c200 sq ft",
-        price: "14.6m",
+        price: "14 600 00",
       },
     ];
 
@@ -198,7 +198,7 @@ function showItems(Houses) {
   document.querySelector("#houses").innerHTML = "";
   Houses.forEach((House, i) => {
     document.querySelector("#houses").innerHTML += `
-    <div class="col-4">
+    <div class="col align-items-center">
       <div class="card"  id="card-2"> 
          <img id="img" src=${House.imgURL} />
          <h5 class="title"> ${House.title}</h5>
@@ -229,42 +229,43 @@ function showItems(Houses) {
 showItems(Houses);
 localStorage.setItem("Houses", JSON.stringify(Houses));
 
-const categoryFilter = (e) => {
-  const category = e.target.value;
-  if (category === "all") {
-    return showItems(items);
-  }
-  const filtered = items.filter((item) => item.category === category);
-  return showItems(filtered);
-};
-localStorage.setItem("Houses", JSON.stringify(Houses));
-const locationFilter = (e) => {
-  const category = e.target.value;
-  if (category === "all") {
-    return showItems(items);
-  }
-  const filtered = items.filter((item) => item.category === category);
-  return showItems(filtered);
-};
-localStorage.setItem("Houses", JSON.stringify(Houses));
+
+// localStorage.setItem("Houses", JSON.stringify(Houses));
 const filterPrice = (e) => {
   const Price = e.target.value;
-  const priceFiltered = forSale.sort((a, b) => a.price - b.price);
-  if (Price === "priceAcsending") {
+  const priceFiltered = Houses.sort((a, b) => a.price - b.price);
+  if (Price === "asc") {
     return showForSale(priceFiltered);
-  } else if (Price === "priceDescsending") {
+  } else if (Price === "desc") {
     return showForSale(priceFiltered.reverse());
   } else if (Price === "all") {
-    const originalSort = forSale.sort((a, b) => a.id - b.id);
+    const originalSort = Houses.sort((a, b) => a.id - b.id);
     return showForSale(originalSort);
   }
 };
 localStorage.setItem("Houses", JSON.stringify(Houses));
 
-const filterLocation = (e) => {
+function categoryFilter(e) {
+  const category = e.target.value;
+  if (category == "all") {
+    return showItems(Houses);
+  }
+  const filtered = Houses.filter(
+    (House) => House.category == category
+  );
+  return showItems(filtered);
+}
+localStorage.setItem("Houses", JSON.stringify(Houses));
+
+function filterLocation(e) {
   const location = e.target.value;
-  const filteredLocation = forSale.filter((House) => {
-    return House.location.toLowerCase().includes(location.toLowerCase());
-  });
-  return showForSale(filteredLocation);
-};
+  if (location == "all") {
+    return showItems(Houses);
+  }
+  const filtered = Houses.filter(
+    (House) => House.address == location
+  );
+  return showItems(filtered);
+}
+
+localStorage.setItem("Houses", JSON.stringify(Houses));
