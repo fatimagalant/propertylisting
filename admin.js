@@ -1,6 +1,5 @@
-localStorage.removeItem("houses");
-let lists = JSON.parse(localStorage.getItem("houses"))
-  ? JSON.parse(localStorage.getItem("houses"))
+let Houses = JSON.parse(localStorage.getItem("Houses"))
+  ? JSON.parse(localStorage.getItem("Houses"))
   : [
       {
         id: "1",
@@ -8,7 +7,7 @@ let lists = JSON.parse(localStorage.getItem("houses"))
         title: " Large Detached House",
         description:
           "2 bedroom detached house with 1.5 bathrooms and a garage on a beautiful property",
-        address: "rrowtown, New Zealand",
+        address: "Arrowtown, New Zealand",
         imgURL:
           "https://i.postimg.cc/SKLvNYTt/zac-gudakov-FH3zl-Ds-Y4-Z4-unsplash.jpg",
         rooms: "4",
@@ -192,27 +191,120 @@ let lists = JSON.parse(localStorage.getItem("houses"))
         price: "14.6m",
       },
     ];
+console.log(Houses);
+
+localStorage.setItem("Houses", JSON.stringify(Houses));
 
 function showItems(Houses) {
   document.querySelector("#adminhouses").innerHTML = "";
-  Houses.forEach((House, i) => {
+  Houses.forEach((House) => {
     document.querySelector("#adminhouses").innerHTML += `
-    <div class="col-4">
-  <img src=${House.imgURL}></img>
-  <p>${House.title}</p>
-  <p>${House.category}</p>
-    <p>${House.id}</p>
+    <tr>
+      <td><input ${House.id} value=${House.id} disabled/></td>
+      <td><input ${House.category} value=${House.category} disabled/></td>
+      <td><input ${House.title} value=${House.title} disabled/></td>
+      <td><input ${House.description} value=${House.description}disabled/></td>
+      <td><input ${House.imgURL} value=${House.imgURL} disabled/></td>
+      <td><input ${House.address} value=${House.address} disabled/></td>
+      <td><input ${House.rooms} value=${House.rooms} disabled/></td>
+      <td><input ${House.bedrooms} value=${House.bedrooms} disabled/></td>
+      <td><input ${House.bathrooms} value=${House.bathrooms} disabled/></td>
+      <td><input ${House.garages} value=${House.garages} disabled/></td>
+      <td><input ${House.area} value=${House.area} disabled/></td>
+      <td><input ${House.price} value=${House.price} disabled/></td>
+      <td><i class="fa-solid fa-trash-can" onclick="delItem(${House.id})"></i>
+          <i class="fa-solid fa-pen-to-square" id="edit${House.id}" onclick="editItem(${House.id})"></i>
+          <i class="fa-solid fa-floppy-disk" id="save${House.id}" onclick="updateItem(${House.id})"></i></td>
+    
     `;
   });
-  function delHouse(id) {
-    Houses = House.filter((House) => {
-      House.id !== id;
-    });
-    localStorage.setItem(Json.stringify(Houses));
-    showItems(Houses);
-  }
-  function editItem(id) {
-    let House = Houses.find((House) => House.id === id);
-    House.title = "new";
-  }
 }
+showItems(Houses);
+localStorage.setItem("Houses", JSON.stringify(Houses));
+
+function delItem(id) {
+  Houses = Houses.filter((House) => {
+    return House.id != id;
+  });
+  localStorage.setItem("Houses", JSON.stringify(Houses));
+  showItems(Houses);
+}
+
+localStorage.setItem("Houses", JSON.stringify(Houses));
+
+function addItem() {
+  let House = {
+    id: Houses.length + 1,
+    title: document.querySelector("#title").value,
+    category: document.querySelector("#category").value,
+    description: document.querySelector("#description").value,
+    imgURL: document.querySelector("#imgURL").value,
+    address: document.querySelector("#address").value,
+    rooms: document.querySelector("#rooms").value,
+    bedrooms: document.querySelector("#bedrooms").value,
+    bathrooms: document.querySelector("#bathrooms").value,
+    garages: document.querySelector("#garages").value,
+    area: document.querySelector("#area").value,
+    price: document.querySelector("#price").value,
+  };
+  Houses.push(House);
+  localStorage.setItem("Houses", JSON.stringify(Houses));
+}
+
+//  Edit Function
+function editItem(id) {
+  document.querySelector(`#title${id}`).disabled = false;
+  document.querySelector(`#address${id}`).disabled = false;
+  document.querySelector(`#bedrooms${id}`).disabled = false;
+  document.querySelector(`#bathrooms${id}`).disabled = false;
+  document.querySelector(`#garages${id}`).disabled = false;
+  document.querySelector(`#area${id}`).disabled = false;
+  document.querySelector(`#category${id}`).disabled = false;
+  document.querySelector(`#imgURL${id}`).disabled = false;
+  document.querySelector(`#price${id}`).disabled = false;
+  document.querySelector(`#rooms${id}`).disabled = false;
+  document.querySelector(`#description${id}`).disabled = false;
+}
+
+function updateItem(id) {
+  const Houses = Houses.find((Houses) => {
+    return Houses.id == id;
+  });
+  const titleBox = document.querySelector(`#title${id}`);
+  const descriptionBox = document.querySelector(`#description${id}`);
+  const addressBox = document.querySelector(`#address${id}`);
+  const bedroomsBox = document.querySelector(`#bedrooms${id}`);
+  const bathroomsBox = document.querySelector(`#bathrooms${id}`);
+  const garageBox = document.querySelector(`#garage${id}`);
+  const areaBox = document.querySelector(`#area${id}`);
+  const typeBox = document.querySelector(`#category${id}`);
+  const imgBox = document.querySelector(`#imgURL${id}`);
+  const priceBox = document.querySelector(`#price${id}`);
+  const roomsBox = document.querySelector(`#rooms${id}`);
+
+  document.querySelector(`#title${id}`).disabled = true;
+  document.querySelector(`#description${id}`).disabled = true;
+  document.querySelector(`#address${id}`).disabled = true;
+  document.querySelector(`#bedrooms${id}`).disabled = true;
+  document.querySelector(`#bathrooms${id}`).disabled = true;
+  document.querySelector(`#garages${id}`).disabled = true;
+  document.querySelector(`#area${id}`).disabled = true;
+  document.querySelector(`#category${id}`).disabled = true;
+  document.querySelector(`#imgURL${id}`).disabled = true;
+  document.querySelector(`#price${id}`).disabled = true;
+  document.querySelector(`#rooms${id}`).disabled = true;
+
+  Houses.title = titleBox.value;
+  Houses.description = descriptionBox.value;
+  Houses.address = addressBox.value;
+  Houses.bedrooms = bedroomsBox.value;
+  Houses.bathrooms = bathroomsBox.value;
+  Houses.garage = garagesBox.value;
+  Houses.area = areaBox.value;
+  Houses.category = category.value;
+  Houses.imgURL = imgURLBox.value;
+  Houses.price = priceBox.value;
+  Houses.rooms = rooms.value;
+  localStorage.setItem("Houses", JSON.stringify(Houses));
+}
+showItems(Houses);

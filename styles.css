@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Hind+Madurai:wght@500&family=Inconsolata:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=EB+Garamond&family=Hind+Madurai:wght@500&family=Inconsolata:wght@300&display=swap");
 
 /* Navigation */
 *:target,
@@ -78,6 +78,9 @@
   justify-content: center;
   text-shadow: 5px 5px 10px black;
   font-size: 70px;
+}
+.heading1 {
+  font-family: "Inconsolata", monospace;
 }
 div#houses {
   display: flex;
@@ -207,6 +210,9 @@ body {
   background: #ccc;
 }
 
+img#img {
+  height: 250px;
+}
 .title::after {
   content: "";
   width: auto;
@@ -245,5 +251,11 @@ a {
   #footer {
     height: 9rem;
     background-color: #ad9999;
+  }
+}
+@media screen and(max-width:2000px) {
+  .rows {
+    display: flex;
+    flex-direction: column;
   }
 }

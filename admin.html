@@ -24,48 +24,170 @@
     />
   </head>
   <body>
-    <div id="adminhouses"></div>
-    <table class="table table-hover table-bordered">
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-dark m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add 
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content ">
+      <div class="modal-header bg-secondary">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-secondary">
+        <form onsubmit="addItem()">
+          <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" class="form-control" id="title">
+  </div>
+          <div class="mb-3">
+    <label  class="form-label">category</label>
+    
+    <select id="category">
+      <option>Apartment</option>
+      <option>Condo</option>
+      <option>Loft</option>
+      <option>single-Family House</option>
+      <option>Multi-Family House</option>
+    </select>
+  </div>
+   <div class="mb-3">
+    <label class="form-label">Description</label>
+    <input type="text" class="form-control" id="description">
+  </div>
+   <div class="mb-3">
+    <label class="form-label">image URL</label>
+    <input type="text" class="form-control" id="imgURL">
+  </div>
+   <div class="mb-3">
+    <label  class="form-label">Location</label>
+    
+    <select id="address">
+      <option>New Zealand</option>
+      <option>Turkey</option>
+      <option>Indonesia</option>
+      <option>Philippines</option>
+      <option>Vietnam</option>
+      <option>Austria</option>
+      <option>Pakistan</option>
+      <option>Greece</option>
+      <option>Thailand</option>
+      <option>Afghanistan</option>
+      <option>Knysna</option>
+      <option>Italy</option>
+    </select>
+  </div>
+   <div class="mb-3">
+    <label  class="form-label">Rooms</label>
+    
+    <select id="rooms">
+      <option>1-3</option>
+      <option>4-6</option>
+      <option>7-10</option>
+      <option>11+</option>
+    </select>
+  </div>
+   <div class="mb-3">
+    <label  class="form-label">Bedrooms</label>
+    
+    <select id="bedrooms">
+      <option>1-3</option>
+      <option>4-5</option>
+      <option>6+</option>
+    </select>
+  </div>
+   <div class="mb-3">
+    <label  class="form-label">Bathrooms</label>
+    
+    <select id="bathrooms">
+      <option>1</option>
+      <option>1.5</option>
+      <option>2</option>
+      <option>3</option>
+      <option>3.5</option>
+      <option>4+</option>
+    </select>
+  </div>
+   <div class="mb-3">
+    <label  class="form-label">Garages</label>
+    
+    <select id="garages">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5+</option>
+    </select>
+  </div>
+   <div class="mb-3">
+    <label class="form-label">Area</label>
+    <input type="text" class="form-control" id="area">
+  </div>
+   <div class="mb-3">
+    <label class="form-label">Price</label>
+    <input type="text" class="form-control" id="price">
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-dark">Save changes</button>
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <table class="table table-hover table-bordered">
       <thead class="table-secondary">
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Title</th>
           <th scope="col">Category</th>
-          <th scope="col">Address</th>
-          <th scope="col">Price</th>
-          <th scope="col">ImgURL</th>
+          <th scope="col">Title</th>
           <th scope="col">Description</th>
+          <th scope="col">imgUrl</th>
+          <th scope="col">Address</th>
           <th scope="col">Rooms</th>
           <th scope="col">Bedrooms</th>
           <th scope="col">Bathrooms</th>
           <th scope="col">Garages</th>
           <th scope="col">Area</th>
+          <th scope="col">Price</th>
+          <th scope="col">Edit</th>
         </tr>
       </thead>
-      <tbody>
-        <!-- row 1 -->
-        <tr>
-          <th scope="row">1</th>
-          <td>Two story apartment</td>
-          <td>Loft Apartment</td>
-          <td>8100 S Ashland Ave, Chicago, IL 60620, USA"</td>
-          <td>R50000 pm</td>
-          <td>https://i.postimg.cc/Hkq8pBVd/pexels-expect-best-323775.jpg</td>
-          <td>5</td>
-          <td>2</td>
-          <td>2</td>
-          <td>6738 sq ft</td>
-          <td>
-            <p><i class="fa-solid fa-delete-left"></i></p>
-            <p><i class="fa-solid fa-pen-to-square"></i></p>
-          </td>
-        </tr>
-    <script src="./admin.js"></script>
-    <!-- Bootstrap JS LINK -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
+
+    <tbody id="adminhouses">
+      
+    </tbody>
+</table>
+      <!-- row 1 -->
+      <!-- <tr>
+      <th scope="row">1</th>
+      <td>Two story apartment</td>
+      <td>Loft Apartment</td>
+      <td>8100 S Ashland Ave, Chicago, IL 60620, USA"</td>
+      <td>R50000 pm</td>
+      <td>https://i.postimg.cc/Hkq8pBVd/pexels-expect-best-323775.jpg</td>
+      <td>5</td>
+      <td>2</td>
+      <td>2</td>
+      <td>6738 sq ft</td>
+      <td>
+        <p><i class="fa-solid fa-delete-left"></i></p>
+        <p><i class="fa-solid fa-pen-to-square"></i></p>
+      </td>
+    </tr>
+    -->
+      <script src="./admin.js"></script>
+      <!-- Bootstrap JS LINK -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"
+      ></script>
+    </tbody>
   </body>
 </html>
