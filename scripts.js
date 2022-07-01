@@ -216,7 +216,7 @@ function showItems(Houses) {
        <p id="garage"><i class="fa-solid fa-warehouse me-1"></i>${House.garages}</p>
     </div>
     <div class="col">
-       <p id="garage"><i class="fa-solid fa-ruler me-1"></i>${House.area} sq ft</p>
+       <p id="garage"><i class="fa-solid fa-ruler me-1"></i>${House.area}</p>
     </div>
   </div>
     </div>
