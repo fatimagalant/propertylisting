@@ -229,30 +229,45 @@ function showItems(Houses) {
 showItems(Houses);
 localStorage.setItem("Houses", JSON.stringify(Houses));
 
-
 // localStorage.setItem("Houses", JSON.stringify(Houses));
-const filterPrice = (e) => {
-  const Price = e.target.value;
-  const priceFiltered = Houses.sort((a, b) => a.price - b.price);
-  if (Price === "asc") {
-    return showForSale(priceFiltered);
-  } else if (Price === "desc") {
-    return showForSale(priceFiltered.reverse());
-  } else if (Price === "all") {
-    const originalSort = Houses.sort((a, b) => a.id - b.id);
-    return showForSale(originalSort);
+// const filterPrice = (e) => {
+//   const Price = e.target.value;
+//   const priceFiltered = Houses.sort((a, b) => a.price - b.price);
+//   if (Price === "asc") {
+//     return showForSale(priceFiltered);
+//   } else if (Price === "desc") {
+//     return showForSale(priceFiltered.reverse());
+//   } else if (Price === "all") {
+//     const originalSort = Houses.sort((a, b) => a.id - b.id);
+//     return showForSale(originalSort);
+//   }
+// };
+// localStorage.setItem("Houses", JSON.stringify(Houses));
+function filterBedrooms(e) {
+  const bedrooms = e.target.value;
+  if (bedrooms == "all") {
+    return showItems(Houses);
   }
-};
+  const filtered = Houses.filter((House) => House.bedrooms == bedrooms);
+  return showItems(filtered);
+}
 localStorage.setItem("Houses", JSON.stringify(Houses));
 
+function filterPrice(e) {
+  const price = e.target.value;
+  if (price == "all") {
+    return showItems(Houses);
+  }
+  const filtered = Houses.filter((House) => House.price == price);
+  return showItems(filtered);
+}
+localStorage.setItem("Houses", JSON.stringify(Houses));
 function categoryFilter(e) {
   const category = e.target.value;
   if (category == "all") {
     return showItems(Houses);
   }
-  const filtered = Houses.filter(
-    (House) => House.category == category
-  );
+  const filtered = Houses.filter((House) => House.category == category);
   return showItems(filtered);
 }
 localStorage.setItem("Houses", JSON.stringify(Houses));
@@ -262,9 +277,7 @@ function filterLocation(e) {
   if (location == "all") {
     return showItems(Houses);
   }
-  const filtered = Houses.filter(
-    (House) => House.address == location
-  );
+  const filtered = Houses.filter((House) => House.address == location);
   return showItems(filtered);
 }
 
