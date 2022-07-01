@@ -264,7 +264,7 @@ a {
 
 @media screen and (max-width: 1108px) {
   #card {
-    float: right;
+    /* float: right; */
     height: fit-content;
   }
 }
@@ -276,5 +276,11 @@ footer {
   tr {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width:1800px){
+  #admincontainer{
+    display: flex;
+    justify-content: flex-end;
   }
 }
