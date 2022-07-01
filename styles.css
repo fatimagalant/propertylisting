@@ -259,3 +259,13 @@ a {
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 1108px) {
+  #card {
+    height: fit-content;
+  }
+}
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

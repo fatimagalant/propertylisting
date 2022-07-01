@@ -49,7 +49,12 @@
     <div class="card shadow-lg" id="card">
       <div class="row">
         <div class="col-md-3">
-          <select class="form-select" aria-label="Default select example" onchange="categoryFilter(event);">>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onchange="categoryFilter(event);"
+          >
+            >
             <option value="all" selected>Property Type</option>
             <option value="Apartment">Apartment</option>
             <option value="Condo">Condo</option>
@@ -59,32 +64,75 @@
           </select>
         </div>
         <div class="col-md-3">
-          <select class="form-select" aria-label="Default select example" onchange="filterLocation(event);">>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onchange="filterLocation(event);"
+          >
+            >
             <option value="all" selected>All Locations</option>
             <option value="Arrowtown, New Zealand">New Zealand</option>
-            <option value="Atabey, Yeni, 32670 Atabey/Isparta, Turkey">Turkey</option>
-            <option value="Ratogesa, Golewa, Ngada Regency, East Nusa Tenggara, Indonesia">Indonesia</option>
-            <option value="Paligawan, Balete, Batangas, Philippines">Philippines</option>
-            <option value="Cửa Nam, Thành phố Vinh, Nghe An, Vietnam">Vietnam</option>
-            <option value="8385 Neuhaus am Klausenbach, Austria">Austria</option>
-            <option value="2 Main Bazzar, Mohalla Ferozpura, Harīpur, Haripur, Khyber Pakhtunkhwa, Pakistan">Pakistan</option>
+            <option value="Atabey, Yeni, 32670 Atabey/Isparta, Turkey">
+              Turkey
+            </option>
+            <option
+              value="Ratogesa, Golewa, Ngada Regency, East Nusa Tenggara, Indonesia"
+            >
+              Indonesia
+            </option>
+            <option value="Paligawan, Balete, Batangas, Philippines">
+              Philippines
+            </option>
+            <option value="Cửa Nam, Thành phố Vinh, Nghe An, Vietnam">
+              Vietnam
+            </option>
+            <option value="8385 Neuhaus am Klausenbach, Austria">
+              Austria
+            </option>
+            <option
+              value="2 Main Bazzar, Mohalla Ferozpura, Harīpur, Haripur, Khyber Pakhtunkhwa, Pakistan"
+            >
+              Pakistan
+            </option>
             <option value="Agios Spyridonas 601 00, Greece">Greece</option>
-            <option value="Lam Thap, Lam Thap District, Krabi 81120, Thailand">Thailand</option>
+            <option value="Lam Thap, Lam Thap District, Krabi 81120, Thailand">
+              Thailand
+            </option>
             <option value="Andkhoy, Afghanistan">Afghanistan</option>
-            <option value="27 Nelson St, Knysna Central, Knysna, 6571">Knysna</option>
-            <option value="Vicolo II Assunta Vergine, 1, 09090 Villa Verde OR, Italy">Italy</option>
+            <option value="27 Nelson St, Knysna Central, Knysna, 6571">
+              Knysna
+            </option>
+            <option
+              value="Vicolo II Assunta Vergine, 1, 09090 Villa Verde OR, Italy"
+            >
+              Italy
+            </option>
           </select>
         </div>
         <div class="col-md-3">
-          <select class="form-select" aria-label="Default select example" onchange="filterPrice(event);">
-             <option value="all" selected> Prices</option>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onchange="filterPrice(event);"
+          >
+            <option value="all" selected>Prices</option>
             <option value="1 100 000">$ 1 100 000</option>
             <option value="1 200 000">$ 1 200 000</option>
+            <option value="2 300 000">$ 2 300 000</option>
+            <option value="3 400 000">$ 3 400 000</option>
+            <option value="5 000 000">$ 5 000 000</option>
+            <option value="7 600 000">$ 7 600 000</option>
+            <option value="10 600 000">$ 10 600 000</option>
+            <option value="14 600 000">$ 14 600 000</option>
           </select>
         </div>
         <div class="col-md-3">
-          <select class="form-select" aria-label="Default select example" onchange="filterBedrooms(event)">
-            <option value="all" selected> Bedrooms</option>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onchange="filterBedrooms(event)"
+          >
+            <option value="all" selected>Bedrooms</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -105,8 +153,241 @@
         <div id="houses"></div>
       </div>
     </section>
+    <footer class="footer-wrap footer-wrap-v1">
+      <div class="footer-top-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div
+                id="houzez_property_taxonomies-4"
+                class="footer-widget widget widget-wrap widget-taxonomy"
+              >
+                <div class="widget-header">
+                  <h3 class="widget-title">Discover</h3>
+                </div>
+                <div class="widget-body">
+                  <ul>
+                    <li>
+                      <a href="#">New Zealand</a>
+                    </li>
+                    <li>
+                      <a href="#">Turkey</a>
+                    </li>
+                    <li>
+                      <a href="#">Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="#">Italy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div
+                id="houzez_contact-2"
+                class="footer-widget widget widget-wrap widget-contact-us"
+              >
+                <div class="widget-header">
+                  <h3 class="widget-title">Contact Us</h3>
+                </div>
+                <div class="widget-body">
+                  <div class="widget-content">
+                    <p></p>
+                    <ul class="list-unstyled contact-list">
+                      <li>
+                        <i class="houzez-icon icon-pin mr-1"></i> 774 NE 84th St
+                        Cape Town, South Africa 33879
+                      </li>
+
+                      <li>
+                        <i class="houzez-icon icon-phone mr-1"></i>
+                        <a href="tel:">(+21) 654 9875 </a>
+                      </li>
+
+                      <li>
+                        <i class="houzez-icon icon-answer-machine mr-1"></i>
+                        (+27) 456 1349
+                      </li>
+
+                      <li>
+                        <i class="houzez-icon icon-envelope mr-1"></i>
+                        <a href="mailto:email@goldencrownproperties.co"
+                          >email@goldencrownproperties.co</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- widget-content -->
+                </div>
+                <!-- widget-body -->
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <div
+                id="mc4wp_form_widget-14"
+                class="footer-widget widget widget-wrap widget_mc4wp_form_widget"
+              >
+                <div class="widget-header">
+                  <h3 class="widget-title">Newsletter</h3>
+                </div>
+                <script>
+                  (function () {
+                    window.mc4wp = window.mc4wp || {
+                      listeners: [],
+                      forms: {
+                        on: function (evt, cb) {
+                          window.mc4wp.listeners.push({
+                            event: evt,
+                            callback: cb,
+                          });
+                        },
+                      },
+                    };
+                  })();
+                </script>
+                <!-- Mailchimp for WordPress v4.8.7 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
+                <form
+                  id="mc4wp-form-1"
+                  class="mc4wp-form mc4wp-form-1251"
+                  method="post"
+                  data-id="1251"
+                  data-name="Footer Form"
+                >
+                  <div class="mc4wp-form-fields">
+                    <div class="row">
+                      <div class="col-8">
+                        <div class="form-group mb-0">
+                          <div class="input-email input-icon">
+                            <input
+                              class="form-control"
+                              type="email"
+                              name="EMAIL"
+                              required=""
+                              placeholder="Enter your email"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="form-group mb-0">
+                          <button
+                            type="submit"
+                            class="btn btn-primary btn-block"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="mt-3">
+                      Golden Crown Properties is a premium website for Designers
+                      &amp; Real Estate Agents.
+                    </p>
+                  </div>
+                  <label style="display: none !important"
+                    >Leave this field empty if you're human:
+                    <input
+                      type="text"
+                      name="_mc4wp_honeypot"
+                      value=""
+                      tabindex="-1"
+                      autocomplete="off" /></label
+                  ><input
+                    type="hidden"
+                    name="_mc4wp_timestamp"
+                    value="1656579933"
+                  /><input
+                    type="hidden"
+                    name="_mc4wp_form_id"
+                    value="1251"
+                  /><input
+                    type="hidden"
+                    name="_mc4wp_form_element_id"
+                    value="mc4wp-form-1"
+                  />
+                  <div class="mc4wp-response"></div>
+                </form>
+                <!-- / Mailchimp for WordPress Plugin -->
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- footer-top-wrap -->
+      <div class="footer-bottom-wrap footer-bottom-wrap-v4">
+        <div class="container">
+          <div class="d-flex justify-content-between">
+            <div class="footer-copyright">
+              © Golden Crown Properties - All rights reserved
+            </div>
+            <!-- footer-copyright -->
+
+            <div class="footer_logo logo">
+              <i class="fa-solid fa-sign-hanging"></i>Golden Crown Properties
+            </div>
+            <!-- .logo -->
+
+            <div class="footer-social">
+              <span>
+                <a class="btn-facebook" target="_blank" href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </span>
+
+              <span>
+                <a class="btn-twitter" target="_blank" href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </span>
+
+              <span>
+                <a class="btn-googleplus" target="_blank" href="#">
+                  <i class="fa-brands fa-google-plus-g"></i>
+                </a>
+              </span>
+
+              <span>
+                <a class="btn-linkedin" target="_blank" href="#">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </span>
+
+              <span>
+                <a class="btn-instagram" target="_blank" href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </span>
+
+              <span>
+                <a class="btn-pinterest" target="_blank" href="#">
+                  <i class="fa-brands fa-pinterest"></i>
+                </a>
+              </span>
+
+              <span>
+                <a class="btn-yelp" target="_blank" href="#">
+                  <i class="fa-brands fa-yelp"></i>
+                </a>
+              </span>
+
+              <span>
+                <a class="btn-youtube" target="_blank" href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+          <!-- d-flex -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- footer-top-wrap -->
+    </footer>
     <!-- Footer -->
-    <footer id="footer">
+    <!-- <footer id="footer">
       <div class="column text-light">
         <h4 class="text-light">Discover</h4>
         <ul>
@@ -135,13 +416,13 @@
         />
         <button type="submit" class="btn btn-dark">Submit</button>
       </div>
-    </footer>
-    <footer id="footer2">
+      <div class="row">
       <div class="column text-light">
         Fatima<i class="fa-solid fa-copyright"></i></i>All Rights Reserved
       </div>
       <i class="fa-solid fa-sign-hanging"></i>Golden Crown Properties
-    </footer>
+      </div>
+    </footer> -->
     <!-- JS LINK -->
     <script src="./scripts.js"></script>
     <!-- Bootstrap JS LINK -->

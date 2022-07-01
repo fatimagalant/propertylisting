@@ -188,7 +188,7 @@ let Houses = JSON.parse(localStorage.getItem("Houses"))
         bathrooms: "3",
         garages: "3",
         area: "4c200 sq ft",
-        price: "14 600 00",
+        price: "14 600 000",
       },
     ];
 
@@ -262,6 +262,7 @@ function filterPrice(e) {
   return showItems(filtered);
 }
 localStorage.setItem("Houses", JSON.stringify(Houses));
+
 function categoryFilter(e) {
   const category = e.target.value;
   if (category == "all") {
