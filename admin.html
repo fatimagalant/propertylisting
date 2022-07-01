@@ -139,7 +139,102 @@
     </div>
   </div>
 </div>
-
+<div class="card shadow-lg" id="card">
+      <div class="row">
+        <div class="col-md-3">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onchange="categoryFilter(event);"
+          >
+            >
+            <option value="all" selected>Property Type</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Condo">Condo</option>
+            <option value="Loft">Loft</option>
+            <option value="Single-Family Home">Single-Family Home</option>
+            <option value="Multi-Family Home">Multi-Family Home</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onchange="filterLocation(event);"
+          >
+            >
+            <option value="all" selected>All Locations</option>
+            <option value="Arrowtown, New Zealand">New Zealand</option>
+            <option value="Atabey, Yeni, 32670 Atabey/Isparta, Turkey">
+              Turkey
+            </option>
+            <option
+              value="Ratogesa, Golewa, Ngada Regency, East Nusa Tenggara, Indonesia"
+            >
+              Indonesia
+            </option>
+            <option value="Paligawan, Balete, Batangas, Philippines">
+              Philippines
+            </option>
+            <option value="Cửa Nam, Thành phố Vinh, Nghe An, Vietnam">
+              Vietnam
+            </option>
+            <option value="8385 Neuhaus am Klausenbach, Austria">
+              Austria
+            </option>
+            <option
+              value="2 Main Bazzar, Mohalla Ferozpura, Harīpur, Haripur, Khyber Pakhtunkhwa, Pakistan"
+            >
+              Pakistan
+            </option>
+            <option value="Agios Spyridonas 601 00, Greece">Greece</option>
+            <option value="Lam Thap, Lam Thap District, Krabi 81120, Thailand">
+              Thailand
+            </option>
+            <option value="Andkhoy, Afghanistan">Afghanistan</option>
+            <option value="27 Nelson St, Knysna Central, Knysna, 6571">
+              Knysna
+            </option>
+            <option
+              value="Vicolo II Assunta Vergine, 1, 09090 Villa Verde OR, Italy"
+            >
+              Italy
+            </option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onchange="filterPrice(event);"
+          >
+            <option value="all" selected>Prices</option>
+            <option value="1 100 000">$ 1 100 000</option>
+            <option value="1 200 000">$ 1 200 000</option>
+            <option value="2 300 000">$ 2 300 000</option>
+            <option value="3 400 000">$ 3 400 000</option>
+            <option value="5 000 000">$ 5 000 000</option>
+            <option value="7 600 000">$ 7 600 000</option>
+            <option value="10 600 000">$ 10 600 000</option>
+            <option value="14 600 000">$ 14 600 000</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onchange="filterBedrooms(event)"
+          >
+            <option value="all" selected>Bedrooms</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+    </div>
    <table class="table table-hover table-bordered">
       <thead class="table-secondary">
         <tr>

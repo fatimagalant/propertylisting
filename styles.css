@@ -16,10 +16,10 @@
 .topnav {
   overflow: hidden;
   z-index: 90;
-  position: fixed;
+  position: relative;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
-  box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.253);
+  box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.288);
 }
 
 .topnav a {
@@ -156,8 +156,10 @@ body {
   height: 7rem;
   width: 80%;
   margin-left: 10%;
-  margin-top: -4;
+  margin-top: -6;
   margin-top: -61px;
+  height: fit-content;
+  padding: 20px;
 }
 #card-2 {
   margin-left: 10px;
@@ -268,4 +270,10 @@ a {
 footer {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+@media screen and (max-width: 700px) {
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
 }

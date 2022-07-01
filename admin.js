@@ -309,10 +309,43 @@ function addItem() {
 // }
 // showItems(Houses);
 
-const filterLocation = (e) => {
+function filterBedrooms(e) {
+  const bedrooms = e.target.value;
+  if (bedrooms == "all") {
+    return showItems(Houses);
+  }
+  const filtered = Houses.filter((House) => House.bedrooms == bedrooms);
+  return showItems(filtered);
+}
+localStorage.setItem("Houses", JSON.stringify(Houses));
+
+function filterPrice(e) {
+  const price = e.target.value;
+  if (price == "all") {
+    return showItems(Houses);
+  }
+  const filtered = Houses.filter((House) => House.price == price);
+  return showItems(filtered);
+}
+localStorage.setItem("Houses", JSON.stringify(Houses));
+
+function categoryFilter(e) {
+  const category = e.target.value;
+  if (category == "all") {
+    return showItems(Houses);
+  }
+  const filtered = Houses.filter((House) => House.category == category);
+  return showItems(filtered);
+}
+localStorage.setItem("Houses", JSON.stringify(Houses));
+
+function filterLocation(e) {
   const location = e.target.value;
-  const filteredLocation = forSale.filter((planet) => {
-    return planet.location.toLowerCase().includes(location.toLowerCase());
-  });
-  return showForSale(filteredLocation);
-};
+  if (location == "all") {
+    return showItems(Houses);
+  }
+  const filtered = Houses.filter((House) => House.address == location);
+  return showItems(filtered);
+}
+
+localStorage.setItem("Houses", JSON.stringify(Houses));
