@@ -233,26 +233,18 @@ img#img {
 a {
   width: 7rem;
 }
-#footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  height: 16rem;
+footer {
   background-color: #caaaaa;
-  display: flex;
-  justify-content: space-around;
+  color:#000000;
 }
-#footer2 {
-  padding: 15px;
-  height: 6rem;
-  background-color: #b39191ad;
-  /* display: flex;
-  justify-content: space-between; */
+a{
+  text-decoration: none;
 }
 @media screen and (max-width: 1092px) {
   #footer {
     height: 9rem;
-    background-color: #ad9999;
+    background-color:#000000;
+    color:white;
   }
 }
 @media screen and(max-width:2000px) {
